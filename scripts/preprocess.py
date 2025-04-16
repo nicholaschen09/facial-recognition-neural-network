@@ -30,5 +30,5 @@ for dataset_type in ['train', 'test']:
         input_dir = os.path.join(input_base_dir, subdir)
         output_dir = os.path.join(output_base_dir, subdir)
         if os.path.isdir(input_dir): 
-            print(f"Processing directory: {input_dir}")
+            print(f"Processing directory: {input_dir}") 
             preprocess_images(input_dir, output_dir)
