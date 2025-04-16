@@ -2,20 +2,20 @@ import cv2
 import torch
 from model import FaceRecognitionCNN
 from torchvision import transforms
+from PIL import Image
 
-# Load model
 model = FaceRecognitionCNN(num_classes=2)
 model.load_state_dict(torch.load('model.pt'))
 model.eval()
 
-# Preprocessing
+class_names = ['nic', 'other'] 
+
 transform = transforms.Compose([
     transforms.Grayscale(),
     transforms.ToTensor(),
     transforms.Normalize((0.5,), (0.5,))
 ])
 
-# Webcam
 cap = cv2.VideoCapture(0)
 while True:
     ret, frame = cap.read()
@@ -25,11 +25,12 @@ while True:
     for (x, y, w, h) in faces:
         face = gray[y:y+h, x:x+w]
         face_resized = cv2.resize(face, (96, 96))
-        face_tensor = transform(face_resized).unsqueeze(0)
+        face_pil = Image.fromarray(face_resized)
+        face_tensor = transform(face_pil).unsqueeze(0)
         with torch.no_grad():
             output = model(face_tensor)
             _, predicted = torch.max(output, 1)
-        label = f"Person {predicted.item()}"
+        label = class_names[predicted.item()] 
         cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
         cv2.putText(frame, label, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
     cv2.imshow('Webcam', frame)
