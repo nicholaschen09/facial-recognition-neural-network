@@ -3,25 +3,25 @@ from torchvision import transforms
 from PIL import Image
 from model import FaceRecognitionCNN
 
-# Load model
-model = FaceRecognitionCNN(num_classes=10)
-model.load_state_dict(torch.load('model.pth'))
+# Load the model
+num_classes = 2 
+model = FaceRecognitionCNN(num_classes)
+model.load_state_dict(torch.load('model.pt'))
 model.eval()
 
-# Preprocess image
-transform = transforms.Compose([
-    transforms.Grayscale(),
-    transforms.ToTensor(),
-    transforms.Normalize((0.5,), (0.5,))
-])
+
+class_names = ['nic', 'other'] 
 
 def predict(image_path):
+    # Load and preprocess the image
     image = Image.open(image_path)
-    image = transform(image).unsqueeze(0)
+    image = transform(image).unsqueeze(0) 
     with torch.no_grad():
         output = model(image)
         _, predicted = torch.max(output, 1)
-    return predicted.item()
+    return class_names[predicted.item()]
 
-# Example usage:
-print(predict('processed/test/person1/img1.jpg'))
+# Example usage
+image_path = '../processed/test/nic/IMG_2058.png'  
+predicted_class = predict(image_path)
+print(f"Predicted class: {predicted_class}")

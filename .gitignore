@@ -12,6 +12,9 @@ processed/
 # Dataset 
 dataset/
 
+# Ignore model files
+*.pt
+
 # Logs
 *.log
 

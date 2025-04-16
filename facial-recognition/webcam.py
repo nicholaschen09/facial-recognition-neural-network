@@ -4,8 +4,8 @@ from model import FaceRecognitionCNN
 from torchvision import transforms
 
 # Load model
-model = FaceRecognitionCNN(num_classes=10)
-model.load_state_dict(torch.load('model.pth'))
+model = FaceRecognitionCNN(num_classes=2)
+model.load_state_dict(torch.load('model.pt'))
 model.eval()
 
 # Preprocessing

@@ -1,15 +1,30 @@
+import torch
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 from model import FaceRecognitionCNN
 
-# Load test data
-test_dataset = datasets.ImageFolder('processed/test', transform=transform)
-test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+# Hyperparameters
+batch_size = 32
 
-# Evaluate
+# Data loaders
+transform = transforms.Compose([
+    transforms.Grayscale(),
+    transforms.ToTensor(),
+    transforms.Normalize((0.5,), (0.5,))
+])
+
+test_dataset = datasets.ImageFolder('../processed/test', transform=transform)
+test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+
+# Load the model
+num_classes = len(test_dataset.classes)
+model = FaceRecognitionCNN(num_classes)
+model.load_state_dict(torch.load('model.pt'))
+model.eval()
+
+# Evaluate the model
 correct = 0
 total = 0
-model.eval()
 with torch.no_grad():
     for images, labels in test_loader:
         outputs = model(images)
@@ -17,4 +32,5 @@ with torch.no_grad():
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
 
-print(f'Accuracy: {100 * correct / total:.2f}%')
+accuracy = 100 * correct / total
+print(f"Accuracy on test dataset: {accuracy:.2f}%")
