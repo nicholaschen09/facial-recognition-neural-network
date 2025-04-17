@@ -39,9 +39,7 @@ for epoch in range(num_epochs):
         optimizer.step()
     print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}")
 
-# Save the trained model
 torch.save(model.state_dict(), 'model.pt')
 print("Model saved as model.pt")
 
-# Success message
 print("Training completed successfully!")

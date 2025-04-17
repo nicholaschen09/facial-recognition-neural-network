@@ -13,7 +13,6 @@ model.eval()
 class_names = ['nic', 'other'] 
 
 def predict(image_path):
-    # Load and preprocess the image
     image = Image.open(image_path)
     image = transform(image).unsqueeze(0) 
     with torch.no_grad():
@@ -21,7 +20,7 @@ def predict(image_path):
         _, predicted = torch.max(output, 1)
     return class_names[predicted.item()]
 
-# Example usage
+# testing
 image_path = '../processed/test/nic/IMG_2058.png'  
 predicted_class = predict(image_path)
 print(f"Predicted class: {predicted_class}")
