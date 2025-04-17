@@ -20,7 +20,3 @@ def predict(image_path):
         _, predicted = torch.max(output, 1)
     return class_names[predicted.item()]
 
-# testing
-image_path = '../processed/test/nic/IMG_2058.png'  
-predicted_class = predict(image_path)
-print(f"Predicted class: {predicted_class}")
