@@ -5,36 +5,6 @@ export default function Page() {
     <main className="page">
       <header>
         <h1 className="hero-title">Facial Recognition Neural Network</h1>
-        <p className="hero-subtitle">
-          A TikTok-style, blog-first walkthrough of how I built a local facial
-          recognition system that can tell whether the webcam is looking at
-          &quot;Nic&quot; or &quot;not Nic&quot; in real time — using a compact
-          CNN in PyTorch and OpenCV.
-        </p>
-
-        <div className="grid">
-          <div className="card">
-            <div className="card-title">Goal</div>
-            <div className="card-body">
-              Turn a raw webcam feed into a real-time, on-device face
-              recognizer with no cloud, just Python, PyTorch and OpenCV.
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-title">Stack</div>
-            <div className="card-body">
-              PyTorch · torchvision · OpenCV (Haar Cascade) · PIL · Next.js
-              front-end for this writeup.
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-title">Key Features</div>
-            <div className="card-body">
-              Preprocessing pipeline, CNN training, test-time evaluation,
-              single-image inference, and a live webcam demo overlaying labels.
-            </div>
-          </div>
-        </div>
       </header>
 
       <section className="section">
@@ -220,12 +190,6 @@ export default function Page() {
       <footer className="footer">
         <div>
           Built by <strong>Nicholas Chen</strong>
-        </div>
-        <div style={{ marginTop: "0.35rem" }}>
-          <span className="tag">Python</span>
-          <span className="tag">PyTorch</span>
-          <span className="tag">OpenCV</span>
-          <span className="tag">Next.js</span>
         </div>
       </footer>
     </main>

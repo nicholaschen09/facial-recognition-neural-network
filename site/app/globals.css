@@ -72,9 +72,9 @@ a:hover {
 
 .card {
   padding: 1rem 1.25rem;
-  border-radius: 0.85rem;
-  background: radial-gradient(circle at top left, #020617, #030712);
-  border: 1px solid #111827;
+  border-radius: 0;
+  background: transparent;
+  border: none;
 }
 
 .card-title {
@@ -91,10 +91,10 @@ a:hover {
 
 .section {
   margin-top: 3rem;
-  padding: 2rem;
-  border-radius: 1.25rem;
-  background: radial-gradient(circle at top left, #020617, #030712);
-  border: 1px solid #1f2933;
+  padding: 2rem 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
 }
 
 .section h2 {
