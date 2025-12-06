@@ -1,0 +1,153 @@
+:root {
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050608;
+  color: #f9fafb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: #9ca3af;
+  max-width: 640px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid #374151;
+  color: #d1d5db;
+  background: radial-gradient(circle at top left, #111827, #020617);
+  margin-bottom: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  padding: 1rem 1.25rem;
+  border-radius: 0.85rem;
+  background: radial-gradient(circle at top left, #020617, #030712);
+  border: 1px solid #111827;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.section {
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  background: radial-gradient(circle at top left, #020617, #030712);
+  border: 1px solid #1f2933;
+}
+
+.section h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.section h3 {
+  font-size: 1.05rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.section p {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.section ul {
+  padding-left: 1.1rem;
+  margin: 0.4rem 0 0.75rem;
+  color: #d1d5db;
+  font-size: 0.95rem;
+}
+
+.section li + li {
+  margin-top: 0.2rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #374151;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-right: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.footer {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 1.5rem;
+  }
+}
+
+

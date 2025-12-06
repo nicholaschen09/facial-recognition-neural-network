@@ -1,3 +1,37 @@
+# macOS
+.DS_Store
+
+# Python
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+
+# Data / artifacts
+dataset/
+processed/
+model.pt
+
+# Logs
+logs/
+*.log
+
+# Node / Next.js
+node_modules/
+site/node_modules/
+site/.next/
+site/.turbo/
+site/out/
+site/.env.local
+site/.env.development.local
+site/.env.test.local
+site/.env.production.local
+
 # Python cache files
 __pycache__/
 *.py[cod]
@@ -24,3 +58,10 @@ dataset/
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+.history/
+history/
+
+node_modules/
+site/node_modules/
+site/.next/
