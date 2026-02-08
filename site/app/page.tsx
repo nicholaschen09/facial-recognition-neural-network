@@ -70,6 +70,11 @@ Successfully processed and saved: ../processed/train/other/sam1.jpg`}</code></pr
           The core model is a compact convolutional neural network tailored for
           96×96 grayscale faces. The architecture is:
         </p>
+        <img
+          src="/cnn-architecture.png"
+          alt="CNN architecture diagram showing convolutional layers, max-pooling, and fully connected layers"
+          className="demo-image"
+        />
         <ul>
           <li>
             Two convolutional blocks: <code>Conv → ReLU → MaxPool</code>,
