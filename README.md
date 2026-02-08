@@ -9,8 +9,6 @@ This project implements a facial recognition system using neural networks in PyT
 - Perform inference on individual images.
 - Real-time face recognition using a webcam.
 
----
-
 ## Setup Instructions
 
 ### 1. Clone the Repository
