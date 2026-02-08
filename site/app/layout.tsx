@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     description:
       "A PyTorch facial recognition system with preprocessing, CNN training, evaluation, and a real-time webcam demo.",
     type: "article",
-    images: ["/nic-demo-webcam.png"],
+    images: ["/cnn-architecture.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Facial Recognition Neural Network",
-    images: ["/nic-demo-webcam.png"],
+    images: ["/cnn-architecture.png"],
   },
 };
 
