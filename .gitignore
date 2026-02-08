@@ -1,5 +1,6 @@
 # macOS
 .DS_Store
+Thumbs.db
 
 # Python
 venv/
@@ -15,53 +16,22 @@ __pycache__/
 # Data / artifacts
 dataset/
 processed/
-model.pt
+*.pt
 
 # Logs
 logs/
 *.log
 
+# Jupyter
+.ipynb_checkpoints/
+
 # Node / Next.js
 node_modules/
-site/node_modules/
 site/.next/
 site/.turbo/
 site/out/
-site/.env.local
-site/.env.development.local
-site/.env.test.local
-site/.env.production.local
+site/.env*.local
 
-# Python cache files
-__pycache__/
-*.py[cod]
-*.pyo
-
-# Virtual environment
-venv/
-
-# Processed data
-processed/
-
-# Dataset 
-dataset/
-
-# Ignore model files
-*.pt
-
-# Logs
-*.log
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# OS-specific files
-.DS_Store
-Thumbs.db
-
+# History
 .history/
 history/
-
-node_modules/
-site/node_modules/
-site/.next/
