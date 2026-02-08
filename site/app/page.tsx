@@ -171,14 +171,6 @@ Accuracy on test dataset: 80.00%`}</code></pre>
           Hit <code>q</code> to exit, and you&apos;ve effectively turned your
           laptop into a tiny, on-device facial recognition system.
         </p>
-        <figure className="demo-figure">
-          <img
-            src="/nic-demo-webcam.png"
-            alt="Webcam demo showing real-time facial recognition with bounding boxes and labels"
-            className="demo-image"
-          />
-          <figcaption>The webcam demo in action — it spots my face and knows it&apos;s me.</figcaption>
-        </figure>
       </section>
 
       <section className="section">
