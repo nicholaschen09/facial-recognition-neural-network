@@ -9,9 +9,21 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Facial Recognition Neural Network – Nicholas Chen",
+  title: "Facial Recognition Neural Network | Nicholas Chen",
   description:
-    "Blog-style walkthrough of a PyTorch facial recognition system with preprocessing, CNN training, evaluation, and a real-time webcam demo.",
+    "A PyTorch facial recognition system with preprocessing, CNN training, evaluation, and a real-time webcam demo.",
+  openGraph: {
+    title: "Facial Recognition Neural Network",
+    description:
+      "A PyTorch facial recognition system with preprocessing, CNN training, evaluation, and a real-time webcam demo.",
+    type: "article",
+    images: ["/nic-demo-webcam.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Facial Recognition Neural Network",
+    images: ["/nic-demo-webcam.png"],
+  },
 };
 
 export default function RootLayout({
