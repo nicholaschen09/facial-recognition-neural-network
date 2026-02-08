@@ -32,10 +32,8 @@ export default function Page() {
           The dataset starts as folders of images grouped by identity, for
           example:
         </p>
-        <p>
-          <code>dataset/train/nic</code> and <code>dataset/train/other</code>,
-          plus matching folders for test data.
-        </p>
+        <pre><code>{`dataset/train/nic\ndataset/train/other`}</code></pre>
+        <p>Plus matching folders for test data.</p>
         <p>
           <code>preprocess.py</code> walks these directories, runs OpenCV&apos;s{" "}
           <code>haarcascade_frontalface_default.xml</code> detector on each
@@ -108,9 +106,7 @@ export default function Page() {
           <code>FaceRecognitionCNN</code> from <code>model.pt</code>, runs it
           on the test loader without gradient tracking, and reports:
         </p>
-        <p>
-          <code>Accuracy on test dataset: XX.XX%</code>
-        </p>
+        <pre><code>Accuracy on test dataset: XX.XX%</code></pre>
         <p>
           This gives a clean, single metric for how well the system
           distinguishes Nic from everyone else on unseen data.
@@ -154,24 +150,7 @@ export default function Page() {
         <p>
           From the Python project root, you can reproduce the full pipeline:
         </p>
-        <ul>
-          <li>
-            Preprocess faces: <code>python preprocess.py</code>
-          </li>
-          <li>
-            Train: <code>python train.py</code>
-          </li>
-          <li>
-            Evaluate: <code>python evaluate.py</code>
-          </li>
-          <li>
-            Webcam demo: <code>python webcam.py</code>
-          </li>
-        </ul>
-        <p>
-          This Next.js page is just the front-end storytelling layer — the real
-          work happens in the PyTorch code under the hood.
-        </p>
+        <pre><code>{`python preprocess.py   # Preprocess faces\npython train.py        # Train the model\npython evaluate.py     # Evaluate accuracy\npython webcam.py       # Webcam demo`}</code></pre>
       </section>
 
       <section className="section">

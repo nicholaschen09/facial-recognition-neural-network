@@ -141,6 +141,34 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.25rem;
 }
 
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85em;
+  background: #fff7ed;
+  color: #9a3412;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  border: 1px solid #fed7aa;
+}
+
+pre {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+  color: #9a3412;
+  line-height: 1.6;
+}
+
 .footer {
   margin-top: 3rem;
   font-size: 0.8rem;
