@@ -53,6 +53,18 @@ export default function Page() {
           or mislabeled images. By the end, every file in{" "}
           <code>processed/</code> is a clean, normalized input for the CNN.
         </p>
+        <p>Example output:</p>
+        <pre><code>{`$ python preprocess.py
+Processing directory: ../dataset/train/nic
+Successfully processed and saved: ../processed/train/nic/nic_3.jpeg
+Successfully processed and saved: ../processed/train/nic/nic_2.jpeg
+Successfully processed and saved: ../processed/train/nic/nic_1.jpeg
+Processing directory: ../dataset/train/other
+Successfully processed and saved: ../processed/train/other/sam5.jpg
+Successfully processed and saved: ../processed/train/other/sam4.jpg
+Successfully processed and saved: ../processed/train/other/sam3.jpg
+Successfully processed and saved: ../processed/train/other/sam2.jpg
+Successfully processed and saved: ../processed/train/other/sam1.jpg`}</code></pre>
 
         <h3>2. CNN Model – `FaceRecognitionCNN` (`model.py`)</h3>
         <p>
@@ -98,6 +110,20 @@ export default function Page() {
           After each epoch the script prints the loss and, when training
           finishes, saves weights to <code>model.pt</code>.
         </p>
+        <p>Example output from a training run:</p>
+        <pre><code>{`$ python train.py
+Epoch [1/10],  Loss: 0.6947
+Epoch [2/10],  Loss: 1.0903
+Epoch [3/10],  Loss: 0.2861
+Epoch [4/10],  Loss: 0.2743
+Epoch [5/10],  Loss: 0.0942
+Epoch [6/10],  Loss: 0.0605
+Epoch [7/10],  Loss: 0.0180
+Epoch [8/10],  Loss: 0.0031
+Epoch [9/10],  Loss: 0.0005
+Epoch [10/10], Loss: 0.0001
+Model saved as model.pt
+Training completed successfully!`}</code></pre>
 
         <h3>4. Measuring Accuracy (`evaluate.py`)</h3>
         <p>
@@ -106,7 +132,9 @@ export default function Page() {
           <code>FaceRecognitionCNN</code> from <code>model.pt</code>, runs it
           on the test loader without gradient tracking, and reports:
         </p>
-        <pre><code>Accuracy on test dataset: XX.XX%</code></pre>
+        <p>Example output:</p>
+        <pre><code>{`$ python evaluate.py
+Accuracy on test dataset: 80.00%`}</code></pre>
         <p>
           This gives a clean, single metric for how well the system
           distinguishes Nic from everyone else on unseen data.
@@ -143,6 +171,14 @@ export default function Page() {
           Hit <code>q</code> to exit, and you&apos;ve effectively turned your
           laptop into a tiny, on-device facial recognition system.
         </p>
+        <figure className="demo-figure">
+          <img
+            src="/nic-demo-webcam.png"
+            alt="Webcam demo showing real-time facial recognition with bounding boxes and labels"
+            className="demo-image"
+          />
+          <figcaption>The webcam demo in action — it spots my face and knows it&apos;s me.</figcaption>
+        </figure>
       </section>
 
       <section className="section">
