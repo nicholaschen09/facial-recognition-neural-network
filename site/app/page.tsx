@@ -199,6 +199,11 @@ Accuracy on test dataset: 80.00%`}</code></pre>
         </p>
       </section>
 
+      <section className="section">
+        <h2>References</h2>
+        <p><a href="https://www.geeksforgeeks.org/deep-learning/convolutional-neural-network-cnn-in-machine-learning/" target="_blank" rel="noopener noreferrer">Convolutional Neural Network (CNN) in Deep Learning</a></p>
+      </section>
+
       <footer className="footer">
         <div>
           Built by Nicholas Chen · <a href="https://github.com/nicholaschen09" target="_blank" rel="noopener noreferrer">GitHub</a>

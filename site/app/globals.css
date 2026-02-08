@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: #ea580c;
+  color: #c2410c;
   text-decoration: none;
 }
 
@@ -191,7 +191,7 @@ pre code {
 .footer {
   margin-top: 1rem;
   font-size: 0.72rem;
-  color: #ea580c;
+  color: #c2410c;
 }
 
 @media (max-width: 640px) {
