@@ -170,14 +170,26 @@ pre code {
 }
 
 .footer {
-  margin-top: 3rem;
+  margin-top: 1rem;
   font-size: 0.8rem;
   color: #ea580c;
 }
 
 @media (max-width: 640px) {
+  .page {
+    padding: 32px 16px 60px;
+  }
+
   .section {
-    padding: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  pre {
+    padding: 0.75rem 1rem;
+  }
+
+  code {
+    word-break: break-word;
   }
 }
 
