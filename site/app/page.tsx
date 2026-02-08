@@ -5,6 +5,7 @@ export default function Page() {
     <main className="page">
       <header>
         <h1 className="hero-title">Facial Recognition Neural Network</h1>
+        <a href="https://github.com/nicholaschen09/facial-recognition-neural-network" target="_blank" rel="noopener noreferrer">GitHub</a>
       </header>
 
       <section className="section">
