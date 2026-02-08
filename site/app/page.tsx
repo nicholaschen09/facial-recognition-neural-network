@@ -189,7 +189,7 @@ export default function Page() {
 
       <footer className="footer">
         <div>
-          Built by <strong>Nicholas Chen</strong>
+          Built by Nicholas Chen · <a href="https://github.com/nicholaschen09" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </footer>
     </main>

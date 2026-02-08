@@ -1,6 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Lora } from "next/font/google";
 import React from "react";
+
+const lora = Lora({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Facial Recognition Neural Network – Nicholas Chen",
@@ -14,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={lora.className}>
       <body>{children}</body>
     </html>
   );
