@@ -9,7 +9,6 @@ export default function Page() {
       </header>
 
       <section className="section">
-        <h2>The Big Picture</h2>
         <p>
           Modern devices unlock with your face in under a second. I wanted to
           rebuild a minimal version of that experience from scratch: collect a
